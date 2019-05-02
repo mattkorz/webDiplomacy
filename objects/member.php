@@ -19,6 +19,7 @@
  */
 
 require_once(l_r('objects/basic/set.php'));
+require_once(l_r('objects/mailer.php'));
 
 /**
  * An object representing a relationship between a user and a game. Mostly contains
@@ -147,6 +148,13 @@ class Member
 	var $userType;
 
 	/**
+	 * The member's e-mail address
+	 *
+	 * @var string
+	 */
+	var $email;
+
+	/**
 	 * Create a Member object from a database Member record row
 	 * @param array $row Member record
 	 */
@@ -229,6 +237,10 @@ class Member
 		notice::send(
 			$this->userID, $this->gameID, 'Game',
 			$keep, $private, $text, $this->Game->name, $this->gameID);
+		if($this->userID == 5) {
+			$Mailer = new Mailer();
+			$Mailer->Send(array($this->email=>$this->email), l_t('Game Message'), $text);
+		}
 	}
 }
 ?>
