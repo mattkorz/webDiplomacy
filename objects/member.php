@@ -146,6 +146,10 @@ class Member
 	 */
 	var $userType;
 
+	/**
+	 * The member's e-mail address.
+	 * @var string
+	 */
 	var $email;
 
 	/**
