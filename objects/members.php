@@ -192,6 +192,7 @@ class Members
 				m.supplyCenterNo as supplyCenterNo,
 				m.unitNo as unitNo,
 				u.username AS username,
+				u.email AS email,
 				u.points AS points,
 				m.pointsWon as pointsWon,
 				IF(s.userID IS NULL,0,1) as online,

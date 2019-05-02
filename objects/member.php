@@ -146,6 +146,8 @@ class Member
 	 */
 	var $userType;
 
+	var $email;
+
 	/**
 	 * Create a Member object from a database Member record row
 	 * @param array $row Member record
