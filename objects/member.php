@@ -19,6 +19,9 @@
  */
 
 require_once(l_r('objects/basic/set.php'));
+require_once(l_r('objects/mailer.php'));
+global $Mailer;
+$Mailer = new Mailer();
 
 /**
  * An object representing a relationship between a user and a game. Mostly contains
