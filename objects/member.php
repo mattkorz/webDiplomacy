@@ -235,9 +235,7 @@ class Member
 		notice::send(
 			$this->userID, $this->gameID, 'Game',
 			$keep, $private, $text, $this->Game->name, $this->gameID);
-		if($this->userID == 5){		
-			mail($this->email, "WebDiplomacy Notice", $text, "From: diplomacy@vipgc.org\r\nReply-To: diplomacy@vipgc.org");
-		}
+		mail($this->email, "WebDiplomacy Notice", $text, "From: diplomacy@vipgc.org\r\nReply-To: diplomacy@vipgc.org");
 	}
 }
 ?>
